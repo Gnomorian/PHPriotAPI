@@ -1,0 +1,14 @@
+<?php
+require("champion.php");
+require("current-game.php");
+require("featured-games.php");
+require("game.php");
+require("leagues.php");
+require("lol-static-data.php");
+require("lol-status.php");
+require("match.php");
+require("matchhistory.php");
+require("stats.php");
+require("summoner.php");
+require("team.php");
+?>
