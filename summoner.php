@@ -6,7 +6,11 @@ namespace summoner;
 function getSummonersByName($region, $names, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/by-name/$names?api_key=$apiKey";
-  $response = file_get_contents($service_url);
+  $response = @file_get_contents($service_url);
+  if(!$response)
+  {
+    return $http_response_header[0];
+  }
   return json_decode($response, true);
 }
 
@@ -16,17 +20,25 @@ function getSummonersByName($region, $names, $apiKey)
 function getSummonersByIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds?api_key=$apiKey";
-  $response = file_get_contents($service_url);
+  $response = @file_get_contents($service_url);
+  if(!$response)
+  {
+    return $http_response_header[0];
+  }
   return json_decode($response, true);
 }
 
 /*
   get summoner masteries by summoner ids
 */
-function functionName($region, $summonerIds, $apiKey)
+function getSummonerMasteriesBySummonerIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds/masteries?api_key=$apiKey";
-  $response = file_get_contents($service_url);
+  $response = @file_get_contents($service_url);
+  if(!$response)
+  {
+    return $http_response_header[0];
+  }
   return json_decode($response, true);
 }
 
@@ -36,7 +48,11 @@ function functionName($region, $summonerIds, $apiKey)
 function getSummonerNamesByIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds/name?api_key=$apiKey";
-  $response = file_get_contents($service_url);
+  $response = @file_get_contents($service_url);
+  if(!$response)
+  {
+    return $http_response_header[0];
+  }
   return json_decode($response);
 }
 
@@ -46,7 +62,11 @@ function getSummonerNamesByIds($region, $summonerIds, $apiKey)
 function getRunesBySummonerIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds/runes?api_key=$apiKey";
-  $response = file_get_contents($service_url);
+  $response = @file_get_contents($service_url);
+  if(!$response)
+  {
+    return $http_response_header[0];
+  }
   return json_decode($response);
 }
 ?>
