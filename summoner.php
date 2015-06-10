@@ -7,7 +7,7 @@ function getSummonersByName($region, $names, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/by-name/$names?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -17,7 +17,7 @@ function getSummonersByIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -27,7 +27,7 @@ function functionName($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v1.4/summoner/$summonerIds/masteries?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
