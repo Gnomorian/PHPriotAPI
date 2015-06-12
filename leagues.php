@@ -7,7 +7,7 @@ function getLeagueBySummonerIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/by-summoner/$summonerIds?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -17,7 +17,7 @@ function getLeagueEntriesBySummonerIds($region, $summonerIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/by-summoner/$summonerIds/entry?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -27,7 +27,7 @@ function getLeagueByTeamIds($region, $teamIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/by-team/$teamIds?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -37,7 +37,7 @@ function getLeagueEntriesByTeamIds($region, $teamIds, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/by-team/$teamIds/entry?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -47,7 +47,7 @@ function getChallengerRankings($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/challenger?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -57,6 +57,6 @@ function getMasterRankings($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/$region/v2.5/league/master?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 ?>

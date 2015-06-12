@@ -7,7 +7,7 @@ function getChampions($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/champion?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -17,7 +17,7 @@ function getCHampionByID($region, $championId, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/champion/$championId?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -27,7 +27,7 @@ function getItems($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/item?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -37,7 +37,7 @@ function getItemByItemId($region, $itemId, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/item/$itemId?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -47,7 +47,7 @@ function getLanguageStrings($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/language-strings?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -57,7 +57,7 @@ function getLanguages($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/languages?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -67,7 +67,7 @@ function getMapData($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/map?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -77,7 +77,7 @@ function getMasteryData($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/mastery?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -87,7 +87,7 @@ function getMasteryById($region, $masteryId, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/mastery/$masteryId?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -97,7 +97,7 @@ function getRealm($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/realm?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -107,7 +107,7 @@ function getRunes($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/rune?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -117,7 +117,7 @@ function getRuneByRuneId($region, $runeId, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/rune/$runeId?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -127,7 +127,7 @@ function getSummonerSpells($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/summoner-spell?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -137,7 +137,7 @@ function getSummonerSpellById($region, $spellId, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/summoner-spell/$spellId?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 
 /*
@@ -147,6 +147,6 @@ function getVersions($region, $apiKey)
 {
   $service_url = "https://$region.api.pvp.net/api/lol/static-data/$region/v1.2/versions?api_key=$apiKey";
   $response = file_get_contents($service_url);
-  return json_decode($response);
+  return json_decode($response, true);
 }
 ?>
