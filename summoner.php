@@ -9,7 +9,14 @@ function getSummonersByName($region, $names, $apiKey)
   $response = @file_get_contents($service_url);
   if(!$response)
   {
-    return $http_response_header[0];
+    if(isset($http_response_header))
+    {
+      return $http_response_header[0];
+    }
+    else
+    {
+      return "Error 1Million dollars!: No Internet Connection";
+    }
   }
   return json_decode($response, true);
 }
@@ -23,7 +30,14 @@ function getSummonersByIds($region, $summonerIds, $apiKey)
   $response = @file_get_contents($service_url);
   if(!$response)
   {
-    return $http_response_header[0];
+    if(isset($http_response_header))
+    {
+      return $http_response_header[0];
+    }
+    else
+    {
+      return "Error 1Million dollars!: No Internet Connection";
+    }
   }
   return json_decode($response, true);
 }
@@ -37,7 +51,14 @@ function getSummonerMasteriesBySummonerIds($region, $summonerIds, $apiKey)
   $response = @file_get_contents($service_url);
   if(!$response)
   {
-    return $http_response_header[0];
+    if(isset($http_response_header))
+    {
+      return $http_response_header[0];
+    }
+    else
+    {
+      return "Error 1Million dollars!: No Internet Connection";
+    }
   }
   return json_decode($response, true);
 }
@@ -51,7 +72,14 @@ function getSummonerNamesByIds($region, $summonerIds, $apiKey)
   $response = @file_get_contents($service_url);
   if(!$response)
   {
-    return $http_response_header[0];
+    if(isset($http_response_header))
+    {
+      return $http_response_header[0];
+    }
+    else
+    {
+      return "Error 1Million dollars!: No Internet Connection";
+    }
   }
   return json_decode($response);
 }
@@ -65,7 +93,14 @@ function getRunesBySummonerIds($region, $summonerIds, $apiKey)
   $response = @file_get_contents($service_url);
   if(!$response)
   {
-    return $http_response_header[0];
+    if(isset($http_response_header))
+    {
+      return $http_response_header[0];
+    }
+    else
+    {
+      return "Error 1Million dollars!: No Internet Connection";
+    }
   }
   return json_decode($response);
 }
